@@ -1,23 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>Squirrel_Sizer</RootNamespace>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.2</Version>
     <Authors>Mr. Squirrely</Authors>
     <Company>MrSquirrely.net</Company>
     <Description>A simple to use file sizer</Description>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
     <RepositoryUrl>https://github.com/MrSquirrelyNet/Squirrel-Sizer</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/MrSquirrelyNet/Squirrel-Sizer</PackageProjectUrl>
+    <RepositoryType />
     <PackageId>SquirrelSizer</PackageId>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="LICENSE.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
     <None Include="LICENSE.txt">
       <Pack>True</Pack>
