@@ -30,7 +30,7 @@ You can even get the complete size of multiple files
 ```c#
 
 List<string> files = new List<string>() {
-            "C:\\Path\\To\\File\\file1.txt,
+            "C:\\Path\\To\\File\\file1.txt",
             "C:\\Path\\To\\File\\file2.txt",
             "C:\\Path\\To\\File\\file3.txt"
         };
