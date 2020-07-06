@@ -1,6 +1,8 @@
 # Squirrel-Sizer
 This is a simple file sizing library.
 
+Goto https://www.nuget.org/packages/SquirrelSizer/
+
 To use it is simple.
 
 You give it a long number and it gives you a string with the size abbreviation suffix.
