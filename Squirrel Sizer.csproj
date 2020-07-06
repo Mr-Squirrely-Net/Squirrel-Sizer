@@ -5,7 +5,7 @@
     <RootNamespace>Squirrel_Sizer</RootNamespace>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
     <Authors>Mr. Squirrely</Authors>
     <Company>MrSquirrely.net</Company>
     <Description>A simple to use file sizer</Description>

@@ -1,17 +1,18 @@
-﻿namespace Squirrel_Sizer {
-    public class Sizer {
-        /// <summary>
-        /// The size suffixes
-        /// </summary>
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+namespace Squirrel_Sizer {
+    public static class Sizer {
         private static readonly string[] SizeSuffixes = { "bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
         /// <summary>
         /// Gets the size suffix from the given parameters
         /// </summary>
         /// <param name="value">The size in bytes you wish to convert.</param>
         /// <param name="decimalPlaces">The decimal places.</param>
-        /// <returns>A string</returns>
+        /// <returns>string</returns>
         /// <example>Sizer.SizeSuffix(1024)</example>
-        public static string SizeSuffix(long value, int decimalPlaces = 1) {
+        public static string SizeSuffix(long value, int decimalPlaces = 0) {
             if (value < 0) {
                 return $"-{SizeSuffix(-value)}";
             }
@@ -24,18 +25,24 @@
             return $"{dValue:n}{SizeSuffixes[i]}";
         }
         /// <summary>
-        /// Gets the zero.
+        /// Returns the size of a given file
         /// </summary>
-        /// <value>
-        /// The zero.
-        /// </value>
+        /// <param name="file">String location of file</param>
+        /// <returns>string</returns>
+        public static string GetSize(string file) => SizeSuffix(new FileInfo(file).Length);
+        /// <summary>
+        /// Returns the complete size of the given files
+        /// </summary>
+        /// <param name="files">A list of the files</param>
+        /// <returns>string</returns>
+        public static string GetCompleteSize(List<string> files) => SizeSuffix(files.Aggregate(0, (current, file) => (int)(current + new FileInfo(file).Length)));
+        /// <summary>
+        /// Returns a size of zero
+        /// </summary>
         public static string Zero => SizeSuffix(0);
         /// <summary>
-        /// Determines the maximum file size
+        /// Returns the maximum file size
         /// </summary>
-        /// <value>
-        /// The maximum.
-        /// </value>
         public static string Max => SizeSuffix(long.MaxValue);
     }
 }
