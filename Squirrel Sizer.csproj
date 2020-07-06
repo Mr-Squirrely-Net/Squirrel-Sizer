@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/MrSquirrelyNet/Squirrel-Sizer</RepositoryUrl>
     <RepositoryType />
     <PackageId>SquirrelSizer</PackageId>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +22,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="LICENSE.txt">
+    <None Include="..\Squirrel-Logger\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
