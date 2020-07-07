@@ -5,16 +5,18 @@
     <RootNamespace>Squirrel_Sizer</RootNamespace>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Authors>Mr. Squirrely</Authors>
     <Company>MrSquirrely.net</Company>
-    <Description>A simple to use file sizer</Description>
+    <Description>A simple and easy to use file sizing utility</Description>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/MrSquirrelyNet/Squirrel-Sizer</RepositoryUrl>
     <RepositoryType />
     <PackageId>SquirrelSizer</PackageId>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageTags>file sizing;file;size;file sizer;sizer;</PackageTags>
+    <PackageProjectUrl>https://github.com/MrSquirrelyNet/Squirrel-Sizer</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
