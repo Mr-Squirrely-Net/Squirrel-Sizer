@@ -8,29 +8,64 @@ To use it is simple.
 ### You give it a long number and it gives you a string with the size abbreviation suffix.
 
 ```c#
-long number = 1024;
-Sizer.GetSizeSuffix(number); // This will output 1.00kb
+long number = 1234500;
+Sizer.Suffix(number); 
+// This will output 1kb
 ```
 
 or 
 
 ```c#
-long number = 1024;
-Sizer.GetSizeName(number); // This will output 1.00 Kilobyte
+long number = 1234500;
+Sizer.SuffixName(number); 
+// This will output 1 Kilobyte
 ```
 
 -------
 
+### It will always give you a number with your string
+### To stop it from giving you a number
+
+```c#
+long number = 1234500;
+Sizer.Suffix(number, includeNumber: false)
+// This will output kb
+```
+
+### You have to include the "includeNumber:" part, this is cause of the way I implemented it.
+### I might change this later.
+
+-------
+
+### To change how many decimal places to use it's easy as well
+
+```c#
+long number = 1234500;
+Sizer.SuffixName(number, 4)
+// This will output 1.1773 Kilobyte
+```
+
+```c#
+long number = 1234500;
+Sizer.SuffixName(number, 4, false)
+// This will output Kilobyte
+```
+
+
+
+-------
 ### To use this with files is even as easy.
 
 ```c#
-Sizer.GetSizeSuffix("C:\\Path\\To\\File\\file.txt"); // This will output the converted size of the file.
+Sizer.Suffix("C:\\Path\\To\\File\\file.txt"); 
+// This will output the converted size of the file.
 ```
 
 or 
 
 ```c#
-Sizer.GetSizeName("C:\\Path\\To\\File\\file.txt"); // This will output the converted size of the file.
+Sizer.SuffixName("C:\\Path\\To\\File\\file.txt"); 
+// This will output the converted size of the file.
 ```
 
 -------
@@ -43,7 +78,8 @@ List<string> files = new List<string>() {
             "C:\\Path\\To\\File\\file2.txt",
             "C:\\Path\\To\\File\\file3.txt"
         };
-Sizer.GetFullSizeSuffix(files); // This will output the size of all the files in the list
+Sizer.AllSuffix(files); 
+// This will output the size of all the files in the list
 ```
 
 or
@@ -54,6 +90,9 @@ List<string> files = new List<string>() {
             "C:\\Path\\To\\File\\file2.txt",
             "C:\\Path\\To\\File\\file3.txt"
         };
-Sizer.GetFullSizeName(files); // This will output the size of all the files in the list
+Sizer.AllSuffixName(files); 
+// This will output the size of all the files in the list
 ```
+
+-------
 
